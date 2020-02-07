@@ -1,6 +1,6 @@
 let sum lst =
-  let rec sum' lst acc =
+  let rec helper lst acc =
     match lst with
     | [] -> acc
-    | hd :: tl -> sum' tl (acc + hd) in
-  sum' lst 0 ;;
+    | hd :: tl -> helper tl (acc + hd) in
+  helper lst 0 ;;
